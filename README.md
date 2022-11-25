@@ -1,6 +1,9 @@
 # CNPhase2
 ![](https://i.imgur.com/ydzopQ6.png)
 
+- 前端：HTML + CSS + JS, 跟使用者互動
+     - CSS : HTML的格式設定
+- 後端：server, node.js
 
 [JS](https://developer.mozilla.org/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript)  
 [HTML+CSS+JS留言板](https://ithelp.ithome.com.tw/users/20129687/ironman/3230?page=1)  
