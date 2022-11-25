@@ -22,4 +22,6 @@
 - Fast Forward : 在同一條分支上面快轉，把目前的 HEAD 指向更前面的 node
 - git reset : merge 失敗或做錯事的時候把本地的 git HEAD 移到某個地方，常用有 HEAD~k(往後k個)或用commit ID找回之前的檔案
      - [reference](https://www.maxlist.xyz/2020/05/03/git-reset-checkout/)
+- git checkout (branch A) -- (file path) : 把 branch A 的 file 複製到目前的 path
+     - [reference](https://www.freecodecamp.org/news/git-checkout-file-from-another-branch/)
      
