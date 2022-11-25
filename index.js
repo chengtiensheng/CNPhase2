@@ -2,7 +2,7 @@
 var http = require('http'); //load http module
 const hostname = 'linux9.csie.ntu.edu.tw';
 const port = 9025;
-const server = http.createServer((req, res) => { //function(req, res)
+const server = http.createServer((req, res) => { // = function(req, res)
     res.statusCode = 200; // OK
     res.setHeader = ('content-Type', 'text/html');
     res.write(`<h1>Test server</h1>`);
