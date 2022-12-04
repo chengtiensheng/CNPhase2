@@ -44,7 +44,34 @@ const server = http.createServer((req, res) => { //function(req, res)
         })
       }
 
-      if(pathname === '/Comment'){ //comment pages
+      if(pathname === '/post'){ // post comment pages
+        fs.readFile('./views/post.html', function (err, data) {
+          if (err) {
+            return res.end('Loading post page failed.')
+          }
+          res.end(data)
+        })
+      }
+
+      if(pathname === '/submit'){ // page after clicking submit
+        var comment = parseObj.query //{name : 'name', Message : 'say something'}
+
+        var today = new Date(); // get date
+        //parse date
+        var date = today.getFullYear() + '/' + (today.getMonth() + 1 ) + '/' + today.getDate(); 
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date + ' ' + time;
+
+        comment.dateTime = dateTime 
+        comments.unshift(comment) // new comment 在上面
+
+        res.statusCode = 302
+        res.setHeader('Location','/') //back to homepage
+        res.end()
+
+
+      }
+      else { //404 not found 
 
       }
 });
