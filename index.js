@@ -4,6 +4,7 @@
 var http = require('http'); // load http module
 var fs = require('fs'); // read file
 var url = require('url') // parse url
+var template = require('art-template') // load comments into index.html
 
 // test command
 var comments = [
@@ -19,6 +20,7 @@ const port = 9025;
 const server = http.createServer((req, res) => { //function(req, res)
     var parseObj = url.parse(req.url, true)
     var pathname = parseObj.pathname
+    console.log(`path name : ${pathname}`)
     // 用 url.parse 將路徑解析為對象；第二個參數是將查詢的字串轉為對象
     // 在讀取首頁時，parseObj 為：
     // Url { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: [Object: null prototype] {}, pathname: '/', path: '/', href: '/' }
@@ -34,6 +36,7 @@ const server = http.createServer((req, res) => { //function(req, res)
     
     if (pathname === '/') { // Homepage
         // data = ./views/index.html
+        console.log('Index.html')
         fs.readFile('./views/index.html', function (err, data) {
           if (err) {
             return res.end('Loading index page failed.')
@@ -68,11 +71,14 @@ const server = http.createServer((req, res) => { //function(req, res)
         res.statusCode = 302
         res.setHeader('Location','/') //back to homepage
         res.end()
-
-
       }
-      else { //404 not found 
-
+      else { //404 not found
+        fs.readFile('./views/404.html', function (err, data){
+          if(err){
+            return res.end('404 Not Found.')
+          }
+          res.end(data)
+        }) 
       }
 });
 server.listen(port, hostname, () => {
