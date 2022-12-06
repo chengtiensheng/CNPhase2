@@ -4,13 +4,13 @@
 var http = require('http'); // load http module
 var fs = require('fs'); // read file
 var url = require('url') // parse url
-
+var template = require('art-template')
 // test command
 var comments = [
     {
       name: 'Test 1',
       message: 'Hello',
-      dateTime: '2022-12-4 13:14:00'
+      dateTime: '2022/12/4 13:14:00'
     }
 ]
 
