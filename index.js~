@@ -43,7 +43,8 @@ const server = http.createServer((req, res) => { //function(req, res)
           res.end(htmlStr)
         })
       }
-      else if(pathname === '/post'){ // post comment pages
+
+      if(pathname === '/post'){ // post comment pages
         fs.readFile('./views/post.html', function (err, data) {
           if (err) {
             return res.end('Loading post page failed.')
@@ -52,7 +53,7 @@ const server = http.createServer((req, res) => { //function(req, res)
         })
       }
 
-      else if(pathname === '/submit'){ // page after clicking submit
+      if(pathname === '/submit'){ // page after clicking submit
         var comment = parseObj.query //{name : 'name', Message : 'say something'}
 
         var today = new Date(); // get date
@@ -71,12 +72,7 @@ const server = http.createServer((req, res) => { //function(req, res)
 
       }
       else { //404 not found 
-        fs.readFile('./views/404.html', function (err, data) {
-          if (err) {
-            return res.end('404 Not Found.')
-          }
-          res.end(data)
-        })
+
       }
 });
 server.listen(port, hostname, () => {
