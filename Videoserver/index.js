@@ -4,10 +4,11 @@ var fs = require('fs') // read file
 var url = require('url') // parse url
 
 const hostname = 'linux12.csie.ntu.edu.tw';
-const port = 9020;
+const port = 9017;
 const server = http.createServer((req, res) => {
     var parseObj = url.parse(req.url, true)
     var pathname = parseObj.pathname
+    console.log(pathname)
     if(pathname === '/'){
         fs.readFile('./index.html', function(err, data){
             if(err){

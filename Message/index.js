@@ -15,10 +15,11 @@ var comments = [
 ]
 
 const hostname = 'linux12.csie.ntu.edu.tw';
-const port = 9015;
+const port = 9016;
 const server = http.createServer((req, res) => { //function(req, res)
     var parseObj = url.parse(req.url, true)
     var pathname = parseObj.pathname
+    console.log(pathname)
     // 用 url.parse 將路徑解析為對象；第二個參數是將查詢的字串轉為對象
     // 在讀取首頁時，parseObj 為：
     // Url { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: [Object: null prototype] {}, pathname: '/', path: '/', href: '/' }
