@@ -6,10 +6,10 @@
     </head>
     <body>
         <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-        <video controls id="video"></video>
+        
 
-    <input type="text" />
     <button id="load">Load</button>
+    <video controls id="video"></video>
     <script>
         if(Hls.isSupported()){
             var video = document.getElementById('video');
@@ -19,7 +19,7 @@
                 video.play();
             });
             document.querySelector("#load").addEventListener("click", function (){
-                hls.loadSource(document.querySelector("input").value);
+                hls.loadSource('streams/output.m3u8');
             })
         } else if (video.canPlayType('application/vnd.apple.mpegurl')){
             video.addEventListener('canplay', function(){
