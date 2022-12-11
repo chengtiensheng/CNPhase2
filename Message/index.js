@@ -10,7 +10,7 @@ var comments = [
     {
       name: 'Test 1',
       message: 'Hello',
-      dateTime: '2022/12/4 13:14:00'
+      dateTime: '2022/12/04 13:14:00'
     }
 ]
 
@@ -58,8 +58,8 @@ const server = http.createServer((req, res) => { //function(req, res)
 
         var today = new Date(); // get date
         //parse date
-        var date = today.getFullYear() + '/' + (today.getMonth() + 1 ) + '/' + today.getDate(); 
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var date = today.getFullYear() + '/' + (today.getMonth() + 1 ) + '/' + (today.getDate()<10? '0':'') + today.getDate(); 
+        var time = today.getHours() + ":" + (today.getMinutes()<10? '0':'') + today.getMinutes() + ":" + (today.getSeconds()<10? '0':'') + today.getSeconds();
         var dateTime = date + ' ' + time;
 
         comment.dateTime = dateTime 

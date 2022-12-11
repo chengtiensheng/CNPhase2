@@ -8,7 +8,9 @@
         <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
         
 
-    <button id="load">Load</button>
+    <button id="load">Load video</button>
+    <input type="button" value="Back to main page" onclick="location.href='http://linux12.csie.ntu.edu.tw:9015'">
+    <br>
     <video controls id="video"></video>
     <script>
         if(Hls.isSupported()){
@@ -16,7 +18,7 @@
             var hls = new Hls();
             hls.attachMedia(video);
             hls.on(Hls.Events.MANIFEST_PARSED, function(){
-                video.play();
+                //video.play();
             });
             document.querySelector("#load").addEventListener("click", function (){
                 hls.loadSource('streams/output.m3u8');
