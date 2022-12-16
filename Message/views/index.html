@@ -17,15 +17,15 @@
   <div class="header container">
     <div class="page-header">
       <h1>Bulletin</h1>
-      <a class="btn btn-success" href="/post">Post</a>
+      <a class="btn btn-primary" href="/post">Post</a>
     </div>
   </div>
-
+  <br>
   <div class="comments container">
     <ul class="list-group">
         <!-- art-template -->
       {{each comments}}
-      <li class="list-group-item">{{ $value.name }}：{{ $value.message }} <span class="pull-right">{{ $value.dateTime }}</span></li>
+      <li class="list-group-item">{{ $value.name }}：{{ $value.message }}<span class="pull-right">{{ $value.dateTime }}</span></li>
       {{/each}}
     </ul>
   </div>

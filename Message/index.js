@@ -29,6 +29,14 @@ const server = http.createServer((req, res) => { //function(req, res)
           res.end(htmlStr)
         })
       }
+      else if(pathname === '/public/css/main.css'){
+        fs.readFile('./public/css/main.css', function (err, data){
+          if (err) {
+            return res.end('Loading css page failed.')
+          }
+          res.end(data)
+        })
+      }
       else if(pathname === '/post'){
         fs.readFile('./views/post.html', function (err, data) {
           if (err) {

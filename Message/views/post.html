@@ -14,7 +14,7 @@
 <body>
   <div class="header container">
     <div class="page-header">
-      <h1><a href="/">Homepage</a></h1>
+      <h1><a class="btn btn-secondary" href="/">Homepage</a></h1>
     </div>
   </div>
   <div class="comments container">
@@ -29,8 +29,9 @@
       </div>
       <div class="form-group">
         <label for="textarea_message">Comments</label>
-        <textarea class="form-control" id="textarea_message" name="message" cols="30" rows="10" required minlength="1" maxlength="200"></textarea>
+        <textarea class="form-control" id="textarea_message" name="message" placeholder="Type your comments here" cols="30" rows="10" required minlength="1" maxlength="200"></textarea>
       </div>
+      <br>
       <button type="submit" class="btn btn-success">Submit</button>
     </form>
   </div>
