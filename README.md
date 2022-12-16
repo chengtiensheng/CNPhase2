@@ -1,5 +1,20 @@
 # CNPhase2
 ![](https://i.imgur.com/ydzopQ6.png)
+# Todo
+網址與port number
+實作了哪些項目 同組組員學號姓名
+簡單敘述如何執行
+網址：http://linux12.csie.ntu.edu.tw:9015
+port number: 9015
+phase2 實作項目：留言板功能、聲音串流、影片串流
+同組組員學號姓名：B09902105 鄭天盛、B10902060翁菀羚
+
+執行方法：
+於CNPHASE2、/Message、/Videoserver都執行```node index.js```
+然後造訪http://linux12.csie.ntu.edu.tw:9015主網站
+可點擊進留言板或是影片區
+留言板區可以按post發表留言、影片區可播放串流影片
+
 
 - 前端：HTML + CSS + JS, 跟使用者互動
      - CSS : HTML的格式設定
