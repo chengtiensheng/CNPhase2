@@ -8,6 +8,7 @@ var template = require('art-template')
 var comments = [
     {
       name: 'Test 1',
+      title: 'Hello',
       message: 'Hello',
       dateTime: '2022/12/04 13:14:00'
     }

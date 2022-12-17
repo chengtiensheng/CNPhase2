@@ -26,7 +26,11 @@
     <ul class="list-group">
         <!-- art-template -->
       {{each comments}}
-      <li class="list-group-item">{{ $value.name }}：{{ $value.message }}<span class="pull-right">{{ $value.dateTime }}</span></li>
+      <li class="list-group-item">
+        <h4>{{ $value.title }}</h4>
+        <span class="pull-right">{{ $value.name }}, {{ $value.dateTime }}</span>
+        {{ $value.message}}
+      </li>
       {{/each}}
     </ul>
   </div>
