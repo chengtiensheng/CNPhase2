@@ -9,8 +9,8 @@ phase2 實作項目：留言板功能、聲音串流、影片串流
 執行方法：  
 於CNPHASE2、/Message、/Videoserver都執行```node index.js```  
 然後造訪http://linux12.csie.ntu.edu.tw:9015主網站  
-可點擊進留言板或是影片區  
-留言板區可以按post發表留言、影片區可播放串流影片  
+可點擊進留言板(Message)或是影片區(Video)  
+留言板區可以按post發表留言、影片區點 Load Video 可載入並播放串流影片  
 
 
 - 前端：HTML + CSS + JS, 跟使用者互動
